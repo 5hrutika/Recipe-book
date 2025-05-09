@@ -8,7 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:server": "json-server --watch db.json --port 3000"
-
   },
   "private": true,
   "dependencies": {
@@ -19,7 +18,9 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "@tailwindcss/cli": "^4.1.5",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.1.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
