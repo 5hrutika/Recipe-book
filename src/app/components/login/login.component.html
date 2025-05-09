@@ -45,17 +45,17 @@
   
             <button type="submit" 
                     class="w-full flex justify-center items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-md">
-              <ng-container >
+              <ng-container *ngIf="loading">
                 <div class="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"></div>
                 Signing in...
               </ng-container>
-              <ng-template #signInText>
+              <ng-container *ngIf="!loading">
                 <span>Sign in</span>
                 <!-- Replace with arrow icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
-              </ng-template>
+              </ng-container>
             </button>
           </form>
         </div>

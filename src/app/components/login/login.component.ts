@@ -1,29 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit {
   user:{email:string,password:string} = {email:"",password:""}
+  loading:boolean = false;
   constructor(private router: Router,private userService:UserService) {}
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
   onSubmit()
 {
-  console.log("insider");
-  console.log(this.user);
+  this.loading = true;
   this.userService.login(this.user).subscribe((data)=>{
     console.log(data);
-    this.router.navigate(['/dashboard']);
+    setTimeout(() => {
+      this.loading = false;
+      this.router.navigate(['/dashboard']);
+    }, 2000);
   })
 }
 }
