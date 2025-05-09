@@ -1,0 +1,33 @@
+<div class="dashboard-container">
+  <div class="categories-section">
+    <h2>Categories</h2>
+    <div class="categories-list">
+      <ul>
+        <li *ngFor="let category of categories">
+          {{ category.name }}
+          <button (click)="viewCategoryRecipes(category.id!)">View Recipes</button>
+          <button (click)="deleteCategory(category.id!)">Delete</button>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="add-category">
+      <button (click)="toggleAddForm()">{{ showAddForm ? 'Cancel' : 'Add Category' }}</button>
+      
+      <div *ngIf="showAddForm" class="add-form">
+        <input 
+          type="text" 
+          [(ngModel)]="newCategory.name" 
+          placeholder="Enter category name"
+          (keyup.enter)="addCategory()"
+        >
+        <button (click)="addCategory()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Router outlet for recipe components -->
+  <div class="recipes-section">
+    <router-outlet></router-outlet>
+  </div>
+</div>
