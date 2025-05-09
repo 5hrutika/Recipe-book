@@ -1,40 +1,84 @@
 {
-  "users":[
+  "users": [
     {
       "id": "1",
-      "email": "test@test.com",
-      "password": "test"
+      "email": "demo@recipebook.com",
+      "password": "demo123"
+    },
+    {
+      "id": "2",
+      "email": "chef@recipebook.com",
+      "password": "chef123"
     }
   ],
   "categories": [
     {
-      "id": "7362",
-      "name": "Sweet"
-    },
-    {
-      "id": "af09",
+      "id": "1",
       "name": "Breakfast"
     },
     {
-      "id": "ff98",
-      "name": "dinner"
+      "id": "2",
+      "name": "Lunch"
     },
     {
-      "id": "fb16",
-      "name": "lunch"
+      "id": "3",
+      "name": "Dinner"
     },
     {
-      "id": "a07f",
-      "name": "delicious"
+      "id": "4",
+      "name": "Desserts"
+    },
+    {
+      "id": "5",
+      "name": "Snacks"
+    },
+    {
+      "id": "6",
+      "name": "Beverages"
     }
   ],
   "recipes": [
     {
       "id": "1",
-      "categoryId": "fb16",
-      "title": "Omelette",
-      "ingredients": "Eggs, salt, pepper",
-      "instructions": "Beat eggs and cook in a pan."
+      "categoryId": "1",
+      "title": "Classic Pancakes",
+      "ingredients": "2 cups all-purpose flour\n2 tablespoons sugar\n2 teaspoons baking powder\n1/2 teaspoon salt\n2 eggs\n1 1/2 cups milk\n2 tablespoons butter, melted",
+      "instructions": "1. Mix dry ingredients in a bowl\n2. Whisk eggs, milk, and melted butter\n3. Combine wet and dry ingredients\n4. Cook on a hot griddle until bubbles form\n5. Flip and cook until golden brown"
+    },
+    {
+      "id": "2",
+      "categoryId": "2",
+      "title": "Chicken Caesar Salad",
+      "ingredients": "2 chicken breasts\n1 head romaine lettuce\n1/2 cup Caesar dressing\n1/4 cup grated parmesan\n1 cup croutons\nSalt and pepper to taste",
+      "instructions": "1. Grill chicken breasts until cooked through\n2. Chop lettuce into bite-sized pieces\n3. Slice chicken into strips\n4. Toss lettuce with dressing\n5. Top with chicken, parmesan, and croutons"
+    },
+    {
+      "id": "3",
+      "categoryId": "3",
+      "title": "Spaghetti Bolognese",
+      "ingredients": "500g ground beef\n1 onion, diced\n2 cloves garlic, minced\n400g canned tomatoes\n2 tablespoons tomato paste\n500g spaghetti\nFresh basil\nSalt and pepper",
+      "instructions": "1. Brown beef in a large pan\n2. Add onion and garlic, cook until soft\n3. Add tomatoes and tomato paste\n4. Simmer for 30 minutes\n5. Cook spaghetti according to package instructions\n6. Serve sauce over pasta with fresh basil"
+    },
+    {
+      "id": "4",
+      "categoryId": "4",
+      "title": "Chocolate Chip Cookies",
+      "ingredients": "2 1/4 cups flour\n1 cup butter, softened\n3/4 cup sugar\n3/4 cup brown sugar\n2 eggs\n1 teaspoon vanilla\n2 cups chocolate chips",
+      "instructions": "1. Cream butter and sugars\n2. Add eggs and vanilla\n3. Mix in flour and chocolate chips\n4. Drop onto baking sheet\n5. Bake at 375°F for 10-12 minutes"
+    },
+    {
+      "id": "5",
+      "categoryId": "5",
+      "title": "Guacamole",
+      "ingredients": "3 avocados\n1 lime, juiced\n1/2 onion, diced\n2 tomatoes, diced\n1/4 cup cilantro\nSalt to taste",
+      "instructions": "1. Mash avocados in a bowl\n2. Add lime juice\n3. Mix in onion, tomatoes, and cilantro\n4. Season with salt\n5. Serve with tortilla chips"
+    },
+    {
+      "id": "6",
+      "categoryId": "6",
+      "title": "Fresh Lemonade",
+      "ingredients": "4 lemons\n1 cup sugar\n4 cups water\nIce cubes\nMint leaves (optional)",
+      "instructions": "1. Juice the lemons\n2. Make simple syrup with sugar and 1 cup water\n3. Combine lemon juice, syrup, and remaining water\n4. Add ice and mint leaves\n5. Stir and serve"
     }
   ]
 }
