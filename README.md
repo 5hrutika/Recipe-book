@@ -1,59 +1,66 @@
-# NgCrudApp
+# Recipe Book App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+A simple and beautiful web application to store and organize your favorite recipes. Built with Angular and Tailwind CSS.
 
-## Development server
+## What This App Does
 
-To start a local development server, run:
+- **Create Your Account**
+  - Sign up with email and password
+  - Log in to access your recipes
+  - Secure authentication system
 
-```bash
-ng serve
-```
+- **Manage Your Recipes**
+  - Create new recipes
+  - Add ingredients and cooking steps
+  - Organize recipes into categories
+  - Edit or delete recipes anytime
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Organize with Categories**
+  - Create custom categories (like "Breakfast", "Dinner", "Desserts")
+  - Group similar recipes together
+  - Easy to find what you're looking for
 
-## Code scaffolding
+## How to Run the App
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Install Required Software**
+   - Node.js (Download from [nodejs.org](https://nodejs.org))
+   - Angular CLI (Install using `npm install -g @angular/cli`)
 
-```bash
-ng generate component component-name
-```
+2. **Setup the Project**
+   ```bash
+   # Clone the project
+   git clone [your-repository-url]
+   
+   # Go to project folder
+   cd ng-crud-app
+   
+   # Install dependencies
+   npm install
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. **Start the Application**
+   ```bash
+   # Start the backend server
+   npm run server
+   
+   # In a new terminal, start the frontend
+   ng serve
+   ```
 
-```bash
-ng generate --help
-```
+4. **Open the App**
+   - Open your browser
+   - Go to `http://localhost:4200`
 
-## Building
+## Features You'll Love
 
-To build the project run:
+- 🌟 Beautiful, easy-to-use interface
+- 📱 Works on all devices (phone, tablet, computer)
+- 🔒 Secure login system
+- 📂 Easy recipe organization
+- ✏️ Simple recipe editing
+- 🗑️ Quick recipe deletion
 
-```bash
-ng build
-```
+## Credits
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Built with Angular
+- Styled with Tailwind CSS
