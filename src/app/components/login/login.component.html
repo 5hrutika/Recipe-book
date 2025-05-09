@@ -1,11 +1,76 @@
-<p>Login</p>
-
-
-
-<form>
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
-    <button type="submit">Login</button>
-</form>
-
-<p>Don't have an account? <a href="/register">Register</a></p>
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 to-orange-50 p-4">
+    <div class="w-full max-w-md space-y-8">
+      
+      <!-- Header Text -->
+      <div class="text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-amber-600">Recipe Book</h2>
+        <p class="mt-2 text-sm text-muted-foreground">
+          Sign in to access your delicious recipes
+        </p>
+      </div>
+  
+      <!-- Card -->
+      <div class="overflow-hidden shadow-md border border-amber-200 rounded-lg">
+        <div class="space-y-1 p-6 bg-gradient-to-r from-amber-100 to-amber-50">
+          <h3 class="text-2xl font-bold flex items-center gap-2 text-amber-700">
+            <!-- Replace with icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 3h16v2H4zM4 7h16v2H4zM4 11h16v2H4zM4 15h16v2H4zM4 19h16v2H4z"/>
+            </svg>
+            Welcome Back
+          </h3>
+          <p>Enter your details to access your recipe collection</p>
+        </div>
+  
+        <div class="p-6 pt-5">
+          <form  class="space-y-4" (ngSubmit)="onSubmit()">
+            <div class="space-y-2">
+              <label for="email" class="block font-medium">Email</label>
+              <input type="email" id="email" name="email" required [(ngModel)]="user.email"
+                     placeholder="name@example.com"
+                     class="animated-input w-full px-4 py-2 border rounded-md" />
+            </div>
+  
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <label for="password" class="block font-medium">Password</label>
+                <a routerLink="/forgot-password" class="text-xs text-amber-600 hover:underline">
+                  Forgot password?
+                </a>
+              </div>
+              <input type="password" id="password"  name="password" required [(ngModel)]="user.password"
+                     placeholder="••••••••"
+                     class="animated-input w-full px-4 py-2 border rounded-md" />
+            </div>
+  
+            <button type="submit" 
+                    class="w-full flex justify-center items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-md">
+              <ng-container >
+                <div class="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"></div>
+                Signing in...
+              </ng-container>
+              <ng-template #signInText>
+                <span>Sign in</span>
+                <!-- Replace with arrow icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </ng-template>
+            </button>
+          </form>
+        </div>
+  
+        <div class="flex flex-col items-center p-6 bg-amber-50">
+          <p class="text-sm text-muted-foreground mb-2">Don't have an account?</p>
+          <a routerLink="/register" class="text-amber-600 font-semibold hover:underline flex items-center gap-1">
+            Create your recipe collection
+            <!-- Arrow icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
