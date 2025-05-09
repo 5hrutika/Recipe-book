@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-recipe-list',
   imports: [CommonModule, RouterModule],
   templateUrl: './recipe-list.component.html',
-  styleUrl: './recipe-list.component.css'
+  styleUrl: './recipe-list.component.css',
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
@@ -22,7 +22,7 @@ export class RecipeListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.categoryId = params['categoryId'];
       if (this.categoryId) {
         this.loadRecipes(this.categoryId);
@@ -42,7 +42,7 @@ export class RecipeListComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error loading recipes:', error);
-      }
+      },
     });
   }
 }

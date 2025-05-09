@@ -7,18 +7,18 @@ export interface User {
   email: string;
   password: string;
 }
-export interface loginData{
-  email:string,
-  password:string
+export interface loginData {
+  email: string;
+  password: string;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   private apiUrl = 'http://localhost:3000/users';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl);
@@ -28,15 +28,15 @@ export class UserService {
     return this.http.get<User[]>(`${this.apiUrl}?email=${user.email}`).pipe(
       map((users: User[]) => {
         // Then check password in code
-        const foundUser = users.find(u => u.password === user.password);
+        const foundUser = users.find((u) => u.password === user.password);
         if (!foundUser) {
           throw new Error('Invalid credentials');
         }
         return foundUser;
-    })
+      })
     );
   }
-register(user:loginData):Observable<User>{
-  return this.http.post<User>(`${this.apiUrl}`,user)
-}
+  register(user: loginData): Observable<User> {
+    return this.http.post<User>(`${this.apiUrl}`, user);
+  }
 }

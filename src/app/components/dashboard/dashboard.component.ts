@@ -3,21 +3,22 @@ import { Category } from '../../services/category.service';
 import { CategoryService } from '../../services/category.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   imports: [CommonModule, FormsModule, RouterModule],
   providers: [CategoryService],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent implements OnInit {
   categories: Category[] = [];
   newCategory: Category = { name: '' };
   showAddForm = false;
 
-  constructor(private categoryService: CategoryService,
+  constructor(
+    private categoryService: CategoryService,
     private router: Router
   ) {}
 
@@ -36,7 +37,7 @@ export class DashboardComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error loading categories:', error);
-      }
+      },
     });
   }
 
@@ -50,7 +51,7 @@ export class DashboardComponent implements OnInit {
         },
         error: (error) => {
           console.error('Error adding category:', error);
-        }
+        },
       });
     }
   }
@@ -58,11 +59,11 @@ export class DashboardComponent implements OnInit {
   deleteCategory(id: number): void {
     this.categoryService.deleteCategory(id).subscribe({
       next: () => {
-        this.categories = this.categories.filter(c => c.id !== id);
+        this.categories = this.categories.filter((c) => c.id !== id);
       },
       error: (error) => {
         console.error('Error deleting category:', error);
-      }
+      },
     });
   }
 

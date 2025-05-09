@@ -15,5 +15,5 @@ export const routes: Routes = [
   { path: 'users', component: UserComponent },
   { path: 'category/:categoryId', component: RecipeListComponent },
   { path: 'recipe/:recipeId', component: RecipeDetailComponent },
-  { path: '**', redirectTo: '' } // Handle 404
+  { path: '**', redirectTo: '' }, // Handle 404
 ];

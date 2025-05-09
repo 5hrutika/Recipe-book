@@ -11,7 +11,7 @@ export interface Recipe {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RecipeService {
   private apiUrl = 'http://localhost:3000/recipes';
