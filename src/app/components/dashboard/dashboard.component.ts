@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
     this.loadCategories();
   }
   viewCategoryRecipes(categoryId: number): void {
-    this.router.navigate(['/dashboard/categories', categoryId, 'recipes']);
+    this.router.navigate(['/category', categoryId]);
   }
 
   loadCategories(): void {

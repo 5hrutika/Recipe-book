@@ -1,22 +1,30 @@
 {
   "categories": [
     {
-      "id": "2",
-      "name": "Desserts"
-    },
-    {
       "id": "7362",
       "name": "Sweet"
     },
     {
       "id": "af09",
       "name": "Breakfast"
+    },
+    {
+      "id": "ff98",
+      "name": "dinner"
+    },
+    {
+      "id": "fb16",
+      "name": "lunch"
+    },
+    {
+      "id": "a07f",
+      "name": "delicious"
     }
   ],
   "recipes": [
     {
       "id": "1",
-      "categoryId": 1,
+      "categoryId": "fb16",
       "title": "Omelette",
       "ingredients": "Eggs, salt, pepper",
       "instructions": "Beat eggs and cook in a pan."

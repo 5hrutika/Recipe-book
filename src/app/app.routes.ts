@@ -12,7 +12,7 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'users', component: UserComponent },
-  { path: 'category/:id', component: RecipeListComponent },
-  { path: 'recipe/:id', component: RecipeDetailComponent },
+  { path: 'category/:categoryId', component: RecipeListComponent },
+  { path: 'recipe/:recipeId', component: RecipeDetailComponent },
   { path: '**', redirectTo: '/dashboard' } // Handle 404
 ];
