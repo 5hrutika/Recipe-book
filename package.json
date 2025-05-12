@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:server": "json-server --watch db.json --port 3000",
-    "build:css": "tailwindcss -i ./src/app/styles/input.css -o ./src/app/styles/output.css --watch"
+    "build:css": "tailwindcss -i ./src/app/styles/input.css -o ./src/app/styles/output.css --watch",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,7 @@
     "@angular/cli": "^19.2.10",
     "@angular/compiler-cli": "^19.2.0",
     "@types/jasmine": "~5.1.0",
+    "husky": "^9.1.7",
     "jasmine-core": "~5.6.0",
     "json-server": "^1.0.0-beta.3",
     "karma": "~6.4.0",
